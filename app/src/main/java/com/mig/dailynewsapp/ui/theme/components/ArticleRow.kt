@@ -27,9 +27,9 @@ import com.mig.dailynewsapp.models.Article
 import java.util.Date
 
 @Composable
-fun ArticleRow(article: Article) {
+fun ArticleRow(modifier: Modifier = Modifier, article: Article) {
     Row(
-        modifier = Modifier
+        modifier = modifier
             .fillMaxWidth()
             .padding(16.dp)
     ) {
@@ -72,7 +72,7 @@ fun ArticleRow(article: Article) {
         ) {
             Text(
                 text = article.title!!,
-                style = MaterialTheme.typography.displaySmall,
+                style = MaterialTheme.typography.headlineSmall,
                 maxLines = 2,
                 overflow = TextOverflow.Ellipsis
             )
